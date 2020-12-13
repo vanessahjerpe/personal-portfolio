@@ -2,24 +2,26 @@
   <Layout>
     <div class="work-container">
       <aside class="sidebar">
-        <h3 class="no-space-top">{{$page.work.title}}</h3>
-        <p>{{$page.work.description}}</p>
+        <h3 class="no-space-top">{{ $page.work.title }}</h3>
+        <p>{{ $page.work.description }}</p>
         <hr />
         <p class="work-details">
           <strong>Year</strong>
-          <span>{{$page.work.date}}</span>
+          <span>{{ $page.work.date }}</span>
         </p>
-        <p class="work-details">
+        <p v-if="$page.work.client !== 'none'" class="work-details">
           <strong>Client</strong>
-          <span>{{$page.work.client}}</span>
+          <span>{{ $page.work.client }}</span>
         </p>
         <p class="work-details">
           <strong>Role</strong>
-          <span>{{$page.work.client}}</span>
+          <span>{{ $page.work.role }}</span>
         </p>
         <p class="work-details">
           <strong>Link</strong>
-          <a :href="`//${$page.work.link}`" class="work-link" target="_blank">{{$page.work.link}}</a>
+          <a :href="`//${$page.work.link}`" class="work-link" target="_blank">{{
+            $page.work.link
+          }}</a>
         </p>
       </aside>
       <article class="content">
@@ -50,9 +52,9 @@ query Portfolio ($path: String!) {
 export default {
   metaInfo() {
     return {
-      title: this.$page.work.title
+      title: this.$page.work.title,
     };
-  }
+  },
 };
 </script>
 

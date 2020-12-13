@@ -3,7 +3,7 @@
     <header class="header">
       <div class="navigation-bar">
         <strong>
-          <g-link to="/">{{ $static.metadata.siteName }}</g-link>
+          <g-link to="/">Vanessa Hjerpe</g-link>
         </strong>
         <nav v-if="showNav" class="nav">
           <g-link class="nav__link" to="/">Work</g-link>
@@ -19,10 +19,6 @@
     </div>
     <footer class="footer">
       <div class="footer__content">
-        <p>
-          Built with 🍻 by
-          <a target="_blank" href="//edmundekott.me">Edmund Ekott</a>
-        </p>
         <p>
           Powered by
           <a target="_blank" href="//gridsome.org">Gridsome</a>
@@ -44,9 +40,9 @@ query {
 export default {
   props: {
     showNav: {
-      default: true
-    }
-  }
+      default: true,
+    },
+  },
 };
 </script>
 
